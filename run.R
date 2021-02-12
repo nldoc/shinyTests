@@ -1,7 +1,9 @@
 
 
 ### Run app:
-shiny::runApp("app")
+shiny::runApp("app_yay")
+shiny::runApp("app_nay")
 
 ### Run tests:
-shiny::runTests("app")
+shiny::runTests("app_yay")
+shiny::runTests("app_nay")
