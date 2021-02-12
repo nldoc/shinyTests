@@ -2,8 +2,9 @@
 
 ## source global
 print("Setup sqlite pool")
+pool_location <- file.path(dirname(dirname(getwd())), "data/dummy.sqlite")
 pool <- pool::dbPool(RSQLite::SQLite(),
-                     dbname = "/Users/jan/Library/R/4.0/library/insciit/sqlite/sciit.sqlite")
+                     dbname = pool_location)
 
 
 
