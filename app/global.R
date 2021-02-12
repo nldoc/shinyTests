@@ -1,5 +1,6 @@
 ## GLOBAL
 
 source("textModule.R")
-source(system.file("sqlite", "initPool.R", package = "insciit"))
-iAmGlobal <- "Global"
+
+pool <- pool::dbPool(RSQLite::SQLite(),
+                     dbname = "/Users/jan/Library/R/4.0/library/insciit/sqlite/sciit.sqlite")

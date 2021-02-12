@@ -6,16 +6,15 @@ textModule <- function(id){
 
       ## Prepare Data for Table view, it is reactive so use profilestable_filtered() to access it:
       dat <- shiny::reactive({
-        req(input$switch)
         if(input$switch) {
-          x <- pool::dbGetQuery(poolINSCIIT, "SELECT * FROM profilestable")
+          x <- pool::dbGetQuery(pool, "SELECT * FROM metrics")
         } else {
-          x <- pool::dbGetQuery(poolINSCIIT, "SELECT * FROM metrics")
+          x <- pool::dbGetQuery(pool, "SELECT * FROM metrics")
         }
         return(x)
       })
 
-      output$text <- renderText(paste0("Selected data has: ", nrow(dat()), " rows"))
+      output$text <- renderText("blabla")
 
     }
   )

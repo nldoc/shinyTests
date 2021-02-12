@@ -1,5 +1,5 @@
 ## Teardown
 
 #print("Close sqlite pool")
-pool::poolClose(poolINSCIIT)
+pool::poolClose(pool)
 

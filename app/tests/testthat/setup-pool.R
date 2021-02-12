@@ -2,6 +2,8 @@
 
 ## source global
 print("Setup sqlite pool")
-source(system.file("sqlite", "initPool.R", package = "insciit"))
+pool <- pool::dbPool(RSQLite::SQLite(),
+                     dbname = "/Users/jan/Library/R/4.0/library/insciit/sqlite/sciit.sqlite")
+
 
 
